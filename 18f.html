@@ -28,7 +28,7 @@
             .append("g")
             .attr("transform", "translate(2,2)");
 
-
+//Flat csv is converted to flare.json format
     d3.csv("data/18f.csv", function(data){
 
         var tree = DataStructures.Tree.createFromFlatTable(data),
@@ -40,7 +40,7 @@
 
                 return objectToDecorate;
             });
-
+//End
         var node = svg.datum(simplifiedTree).selectAll(".node")
                 .data(pack.nodes)
                 .enter().append("g")
